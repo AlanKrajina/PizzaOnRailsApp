@@ -5,11 +5,41 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+  <ul>
+
+  <% if current_user %>
+  <li><%= link_to "Homepage", root_url %></li>
+
+  <li>
+    <a href="<%= user_path(current_user) %>"><%= current_user.name %>'s profile</a>
+  </li>
+  <li><%= link_to "Log Out", signout_path, method: :delete %></li>
+
+<% else %>
+
+
+    <li><%= link_to "Sign Up", new_user_path %></li>
+    <li><%= link_to "Log In", signin_path %></li>
+
+<% end %>
+
+
+
+</ul>
+
+
+
+
+
+
+  <div>
+  <%= yield %>
+  </div>
+
   </body>
 </html>
