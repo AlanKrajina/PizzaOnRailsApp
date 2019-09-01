@@ -1,0 +1,12 @@
+<h1>Welcome <%= @user.name %></h1>
+
+<% if @user.admin %>
+<p>ADMIN</p>
+<% end %>
+
+
+<p>Email: <%= @user.email %></p>
+<p>Wallet: <%= @user.wallet %></p>
+
+
+<%= link_to "Create new pizza", new_pizza_path %>
