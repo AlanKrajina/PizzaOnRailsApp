@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pizzas
   resources :ratings
   resources :drinks
   resources :dips
