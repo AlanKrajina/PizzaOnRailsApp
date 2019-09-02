@@ -36,14 +36,14 @@
 
 
   <%= f.label :rating_id, "Select a Rating" %>
-  <%= f.collection_select :rating_id, Rating.all, :id, :stars, prompt: true %>
-  </br>
+    <%= f.collection_select :rating_id, Rating.all, :id, :stars, prompt: true %>
+    </br>
+  
+    
+
+  <br><br>
+
+  <%= f.submit %>
 
 
-
-
-
-<%= f.submit %>
-
-
-<% end %>
+  <% end %>

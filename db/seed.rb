@@ -43,8 +43,8 @@ Drink.create(name: "Diet coke")
 Drink.create(name: "Fanta orange")
 Drink.create(name: "7up")
 
-Rating.create({stars: "*1", comment: "Terrible"})
-Rating.create({stars: "*2", comment: "Mediocre"})
-Rating.create({stars: "*3", comment: "Good")}
-Rating.create({{stars: "*4", comment: "Excellent}")
-Rating.create({stars: "*5", comment: "Superb"})
+Rating.create(stars: "*1", comment: "Terrible")
+Rating.create(stars: "*2", comment: "Mediocre")
+Rating.create(stars: "*3", comment: "Good"}
+Rating.create(stars: "*4", comment: "Excellent}")
+Rating.create(stars: "*5", comment: "Superb")

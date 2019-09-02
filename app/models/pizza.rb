@@ -10,7 +10,7 @@ class Pizza < ApplicationRecord
     has_many :toppings
 
 
- #   validates :rating_id, presence: true
+  #  validates :rating_id, presence: true
   #  validates_associated :rating
 
   #  accepts_nested_attributes_for :rating
