@@ -1,11 +1,9 @@
 class PizzasController < ApplicationController
-    #    before_action :check_for_logged_in, except: [:index]
+        before_action :check_for_logged_in, except: [:index]
     
         def index
             @pizzas = Pizza.all
         end
-        
-    
     
     
         def new
@@ -42,7 +40,7 @@ class PizzasController < ApplicationController
           private
         
           def pizza_params
-            params.require(:pizza).permit(:name, :delivery_address, :delivery_notes, meat_ids: [], cheese_ids: [], topping_ids: [], dip_ids: [], drink_ids: [], :rating_id)
+            params.require(:pizza).permit(:name, :delivery_address, :delivery_notes, meat_ids: [], cheese_ids: [], topping_ids: [], dip_ids: [], drink_ids: [])
         end
     
     end
