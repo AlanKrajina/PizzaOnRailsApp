@@ -10,7 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_01_202912) do
+ActiveRecord::Schema.define(version: 2019_09_02_095106) do
+
+  create_table "cheeses", force: :cascade do |t|
+    t.string "name"
+    t.integer "pizza_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "dips", force: :cascade do |t|
+    t.string "name"
+    t.integer "pizza_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "drinks", force: :cascade do |t|
+    t.string "name"
+    t.integer "pizza_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "meats", force: :cascade do |t|
+    t.string "name"
+    t.integer "pizza_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.string "stars"
+    t.string "comment", default: "No comment available", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "toppings", force: :cascade do |t|
+    t.string "name"
+    t.integer "pizza_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

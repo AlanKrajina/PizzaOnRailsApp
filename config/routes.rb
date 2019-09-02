@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :ratings
+  resources :drinks
+  resources :dips
+  resources :toppings
+  resources :cheeses
+  resources :meats
   resources :users
   root "static_pages#home"
 

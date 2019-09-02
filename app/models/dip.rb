@@ -1,0 +1,2 @@
+class Dip < ApplicationRecord
+end

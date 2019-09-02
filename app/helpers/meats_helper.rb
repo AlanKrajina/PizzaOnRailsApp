@@ -1,0 +1,2 @@
+module MeatsHelper
+end

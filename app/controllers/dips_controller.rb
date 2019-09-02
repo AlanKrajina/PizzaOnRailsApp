@@ -1,0 +1,2 @@
+class DipsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+module DipsHelper
+end
