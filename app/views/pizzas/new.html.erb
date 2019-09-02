@@ -1,0 +1,65 @@
+<%= form_for @pizza do |f| %>
+    <div>
+    <%= f.label "Pizza Name" %>
+    <%= f.text_field :name %>
+    </div></br>
+    <div>
+    <%= f.label "Delivery Address" %>
+    <%= f.text_area :delivery_address %>
+    </div></br>
+    <div>
+    <%= f.label "Delivery Notes" %>
+    <%= f.text_area :delivery_notes %>
+    </div></br>
+ 
+    <div><p><strong>Select meat:</strong><p>
+    <%= f.collection_check_boxes :meat_ids, Meat.all, :id, :name %>
+    </div></br>
+
+    <div><p><strong>Select cheese:</strong><p>
+    <%= f.collection_check_boxes :cheese_ids, Cheese.all, :id, :name %>
+    </div></br>
+
+    <div><p><strong>Select toppings:</strong><p>
+    <%= f.collection_check_boxes :topping_ids, Topping.all, :id, :name %>
+    </div></br>
+
+    <div><p><strong>Select dips:</strong><p>
+    <%= f.collection_check_boxes :dip_ids, Dip.all, :id, :name %>
+    </div></br>
+
+    <div><p><strong>Select drinks:</strong><p>
+    <%= f.collection_check_boxes :drink_ids, Drink.all, :id, :name %>
+    </div></br>
+
+
+
+
+    <div><p><strong>Select rating:</strong><p>
+    <%= f.collection_select :rating_id, Rating.all, :id, :stars %>
+    </div></br>
+  
+  
+
+
+  <% if !params[:rating_id] %>
+
+    <h4>Or create a new rating with a comment</h4>
+
+    <%= f.fields_for :rating do |v|%>
+        <%= v.label :stars %>
+        <%= v.text_field :stars %>
+
+        <%= v.label :comment %>
+        <%= v.text_field :comment %>
+
+    <% end %>
+  <% end %>
+
+  <br><br>
+
+
+  <%= f.submit %>
+
+
+  <% end %>
