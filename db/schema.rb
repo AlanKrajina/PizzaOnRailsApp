@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_02_095721) do
+ActiveRecord::Schema.define(version: 2019_09_02_113359) do
 
   create_table "cheeses", force: :cascade do |t|
     t.string "name"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2019_09_02_095721) do
 
   create_table "ratings", force: :cascade do |t|
     t.string "stars"
-    t.string "comment", default: "No comment available", null: false
+    t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

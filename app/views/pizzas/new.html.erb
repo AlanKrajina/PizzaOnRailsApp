@@ -1,15 +1,15 @@
 <%= form_for @pizza do |f| %>
     <div>
-    <%= f.label "Pizza Name" %>
+    <%= f.label :name %>
     <%= f.text_field :name %>
     </div></br>
     <div>
-    <%= f.label "Delivery Address" %>
-    <%= f.text_area :delivery_address %>
+    <%= f.label :delivery_address %>
+    <%= f.text_field :delivery_address %>
     </div></br>
     <div>
-    <%= f.label "Delivery Notes" %>
-    <%= f.text_area :delivery_notes %>
+    <%= f.label :delivery_notes %>
+    <%= f.text_field :delivery_notes %>
     </div></br>
  
     <div><p><strong>Select meat:</strong><p>
@@ -35,14 +35,11 @@
 
 
 
-    <div><p><strong>Select rating:</strong><p>
-    <%= f.collection_select :rating_id, Rating.all, :id, :stars %>
-    </div></br>
+    <%= f.label :rating_id, "Select a Rating" %>
+    <%= f.collection_select :rating_id, Rating.all, :id, :stars, prompt: true %>
+    </br>
   
-  
-
-
-  <% if !params[:rating_id] %>
+    <% if !params[:rating_id] %>
 
     <h4>Or create a new rating with a comment</h4>
 
@@ -55,6 +52,7 @@
 
     <% end %>
   <% end %>
+
 
   <br><br>
 

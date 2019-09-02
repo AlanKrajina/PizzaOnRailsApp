@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :pizzas
   resources :ratings
+  resources :pizzas
   resources :drinks
   resources :dips
   resources :toppings
