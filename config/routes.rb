@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   resources :meats
   resources :users
 
- # resources :ratings do
-  #  resources :pizzas, only: [:new, :create, :index]
-  #end
+  resources :ratings do
+    resources :pizzas, only: [:new, :create, :index]
+  end
 
 
   root "static_pages#home"

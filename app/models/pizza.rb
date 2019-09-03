@@ -11,16 +11,16 @@ class Pizza < ApplicationRecord
 
 
   #  validates :rating_id, presence: true
-  #  validates_associated :rating
+   # validates_associated :rating
 
-  #  accepts_nested_attributes_for :rating
+    accepts_nested_attributes_for :rating
 
 
 
-  #  def rating_attributes=(attributes)
-   #     rating = Rating.find_or_create_by(attributes)
-    #    self.rating = rating if rating.valid? || !self.rating
-    # end
+#    def rating_attributes=(attributes)
+#        rating = Rating.find_or_create_by(attributes)
+#        self.rating = rating if rating.valid? || !self.rating
+#     end
 
 
 end

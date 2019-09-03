@@ -11,14 +11,14 @@
   <body>
   <ul>
 
-  <% if logged_in? %>
+  <% if current_user %>
   <li><%= link_to "Homepage", root_url %></li>
 
   <li>
     <a href="<%= user_path(current_user) %>"><%= current_user.name %>'s profile</a>
   </li>
 
-  <li><%= link_to 'All Meats', meats_path %></li>
+  <li><%= link_to 'All pizzas', pizzas_path %></li>
 
 
 

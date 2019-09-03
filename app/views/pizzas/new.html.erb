@@ -35,15 +35,21 @@
 
 
 
-  <%= f.label :rating_id, "Select a Rating" %>
-    <%= f.collection_select :rating_id, Rating.all, :id, :stars, prompt: true %>
-    </br>
-  
-    
+  <h4>Create a rating between 0-5 with a comment for others to see:</h4>
 
-  <br><br>
+  <%= f.fields_for :rating do |v|%>
 
-  <%= f.submit %>
+      <%= v.label :stars %>
+      <%= v.number_field :stars, max:5 %>
 
-
+      <%= v.label :comment %>
+      <%= v.text_field :comment %>
   <% end %>
+
+<br><br>
+
+
+<%= f.submit %>
+
+
+<% end %>
