@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   resources :meats
   resources :users
 
-  resources :ratings do
+  resources :users do
     resources :pizzas, only: [:new, :create, :index]
   end
+
+  get 'users/:id/pizza/:pizza_id', to: 'users#pizza'
 
 
   root "static_pages#home"

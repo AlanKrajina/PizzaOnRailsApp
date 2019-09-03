@@ -1,7 +1,13 @@
 class PizzasController < ApplicationController
     
         def index
+          if params[:user_id]
+            @pizzas = User.find(params[:user_id]).pizzas
+          else
             @pizzas = Pizza.all
+          end
+
+        #    @pizzas = Pizza.all
         end
     
     
