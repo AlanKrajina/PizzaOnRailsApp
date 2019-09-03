@@ -1,4 +1,5 @@
-    
+<% if @pizza.user == current_user %>
+
 <div>
   <h4><%= @pizza.name %></h4>
   <p><%= @pizza.delivery_address %></p>
@@ -33,7 +34,41 @@
     <h4>Pizza comment: <%= @pizza.rating.comment %></h4>
 
 
-    <% if @pizza.user == current_user %>
     <%= link_to "Edit Pizza", edit_pizza_path(@pizza) %>
     <%= link_to "Delete Pizza", pizza_path(@pizza), method: :delete  %>
+
+
+
+<% else %>
+    <div>
+    <h4><%= @pizza.name %></h4>
+  </div>
+  
+  <ul>
+  <% @pizza.meats.each do |meat| %>
+      <li><%= meat.name %></li>
+  <% end %>
+  </ul>
+  
+  <ul>
+  <% @pizza.cheeses.each do |cheese| %>
+      <li><%= cheese.name %></li>
+  <% end %>
+  </ul>
+  
+  <ul>
+  <% @pizza.toppings.each do |topping| %>
+      <li><%= topping.name %></li>
+  <% end %>
+  </ul>
+  
+  <ul>
+  <% @pizza.dips.each do |dip| %>
+      <li><%= dip.name %></li>
+  <% end %>
+  </ul>
+  
+      <h4>Pizza stars: *<%= @pizza.rating.stars %></h4>
+      <h4>Pizza comment: <%= @pizza.rating.comment %></h4>
+
   <% end %>
