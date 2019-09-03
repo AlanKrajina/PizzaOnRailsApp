@@ -1,22 +1,9 @@
-<ul>
 
 <% @pizzas.each do |pizza| %>
-    <h2><%= pizza.name %></h2>
-    <% pizza.cheeses.each do |ing| %>
-        <li><%= ing.name %></li>
-        <% end %>
-    <% pizza.meats.each do |ing| %>
-        <li><%= ing.name %></li>
-        <% end %>
-    <% pizza.dips.each do |ing| %>
-        <li><%= ing.name %></li>
-        <% end %>
-    <% pizza.toppings.each do |ing| %>
-        <li><%= ing.name %></li>
-        <% end %>
-</ul>
-    <h4><%= pizza.rating.stars %></h4>
-    <h4><%= pizza.rating.comment %></h4>
+    <h4><%= link_to pizza.name, pizza_path(pizza) %></h4>
 
+    <h4>Pizza stars: *<%= pizza.rating.stars %></h4>
+    <h4>Pizza comment: <%= pizza.rating.comment %></h4>
+    </br>
 <% end %>
 

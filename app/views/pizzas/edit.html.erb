@@ -1,0 +1,55 @@
+<%= form_for @pizza do |f| %>
+    <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    </div></br>
+    <div>
+    <%= f.label :delivery_address %>
+    <%= f.text_field :delivery_address %>
+    </div></br>
+    <div>
+    <%= f.label :delivery_notes %>
+    <%= f.text_field :delivery_notes %>
+    </div></br>
+  
+    <div><p><strong>Select meat:</strong><p>
+    <%= f.collection_check_boxes :meat_ids, Meat.all, :id, :name %>
+    </div></br>
+  
+    <div><p><strong>Select cheese:</strong><p>
+    <%= f.collection_check_boxes :cheese_ids, Cheese.all, :id, :name %>
+    </div></br>
+  
+    <div><p><strong>Select toppings:</strong><p>
+    <%= f.collection_check_boxes :topping_ids, Topping.all, :id, :name %>
+    </div></br>
+  
+    <div><p><strong>Select dips:</strong><p>
+    <%= f.collection_check_boxes :dip_ids, Dip.all, :id, :name %>
+    </div></br>
+  
+    <div><p><strong>Select drinks:</strong><p>
+    <%= f.collection_check_boxes :drink_ids, Drink.all, :id, :name %>
+    </div></br>
+  
+  
+  
+  
+    <h4>Create a rating between 0-5 with a comment for others to see:</h4>
+  
+    <%= f.fields_for :rating do |v|%>
+  
+        <%= v.label :stars %>
+        <%= v.number_field :stars, max:5 %>
+  
+        <%= v.label :comment %>
+        <%= v.text_field :comment %>
+    <% end %>
+  
+  <br><br>
+  
+  
+  <%= f.submit %>
+  
+  
+  <% end %>

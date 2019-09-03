@@ -1,6 +1,6 @@
     
 <div>
-  <p><%= @pizza.name %></p>
+  <h4><%= @pizza.name %></h4>
   <p><%= @pizza.delivery_address %></p>
   <p><%= @pizza.delivery_notes %></p>
 </div>
@@ -29,8 +29,11 @@
 <% end %>
 </ul>
 
-    <h3>Pizza stars: *<%= @pizza.rating.stars %></h3>
-    <h3>Pizza comment: <%= @pizza.rating.comment %></h3>
+    <h4>Pizza stars: *<%= @pizza.rating.stars %></h4>
+    <h4>Pizza comment: <%= @pizza.rating.comment %></h4>
 
 
-
+    <% if @pizza.user == current_user %>
+    <%= link_to "Edit Pizza", edit_pizza_path(@pizza) %>
+    <%= link_to "Delete Pizza", pizza_path(@pizza), method: :delete  %>
+  <% end %>
