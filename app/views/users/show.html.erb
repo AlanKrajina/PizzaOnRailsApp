@@ -7,5 +7,5 @@
 
 <p>Email: <%= @user.email %></p>
 
-<%= link_to 'New Pizza', new_pizza_path %>
+<%= link_to 'New Pizza', new_user_pizza_path(@user.id) %>
 
