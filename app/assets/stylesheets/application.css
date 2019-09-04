@@ -23,10 +23,10 @@
 
 .a-six{
     color:#0E1896;
-    background-color:rgba(206, 184, 110, 0.6) ;
+    background-color:rgba(207, 189, 127, 0.7) ;
     margin-right: 80em;
     border-radius: 25px;
-    border: 2px solid rgb(19, 141, 119);
+    border: 2px solid rgb(85, 94, 52);
     padding: 5px; 
 }
 
@@ -44,7 +44,7 @@
     background-color:rgba(211, 173, 47, 0.6) ;
     margin-right: 70em;
     border-radius: 25px;
-    border: 2px solid rgb(19, 141, 119);
+    border: 2px solid rgb(85, 94, 52);
     padding: 5px; 
 }
 
@@ -63,7 +63,7 @@
     background-color:rgba(206, 184, 110, 0.6) ;
     margin-right: 30em;
     border-radius: 25px;
-    border: 2px solid rgb(19, 141, 119);
+    border: 2px solid rgb(85, 94, 52);
     padding: 5px; 
 }
 
@@ -71,5 +71,9 @@
     color:rgba(255, 255, 255, 0.6);
     font-weight: bold;
     font-size: 60px;
-
+    background-color:rgba(206, 184, 110, 0.6) ;
+    margin-right: 14em;
+    border-radius: 25px;
+    border: 2px solid rgb(85, 94, 52);
+    padding: 5px; 
 }
