@@ -1,0 +1,11 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><font color="red"><%= pluralize(@user.errors.count, "error") %> prohibited this user from being created:</font></h2>
+ 
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><em><font color="red"><%= msg %></font><em></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
