@@ -17,7 +17,7 @@ class Pizza < ApplicationRecord
 
     def at_least_one_ingredient
       if [self.meats, self.cheeses, self.dips, self.toppings, self.drinks].reject(&:blank?).size == 0
-        errors[:base] << ("Please choose at least one name - any language will do.")
+        errors[:base] << ("Please choose at least one meat, cheese, dip, topping or drink - we don't want to send you empty pizza crust :)")
       end
     end  
 
