@@ -1,11 +1,11 @@
-<h1>Welcome <%= @user.name %></h1>
+<h1><em><font color="white">Welcome <%= @user.name %></font><em></h1>
 
 <% if @user.admin %>
 <p>ADMIN</p>
 <% end %>
 
 
-<p>Email: <%= @user.email %></p>
+<p class= "a-primary">Email: <%= @user.email %></p>
 
-<%= link_to 'New Pizza', new_user_pizza_path(@user.id) %>
+<p><%= link_to 'Create a new Pizza', new_user_pizza_path(@user.id), class: "a-primary" %></p>
 

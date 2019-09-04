@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ .a-primary{
+    color:#CED0FB;
+}
+
+.a-secondary{
+    color:#81F7E1;
+}
+
