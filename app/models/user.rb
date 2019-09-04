@@ -5,5 +5,7 @@ class User < ApplicationRecord
     has_many :ratings, through: :pizzas
 
     validates :name, :email, presence: true
-    validates :name, :email, uniqueness: true
+    validates :name,  uniqueness: true
+    validates :email, uniqueness: true, format: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
+
 end

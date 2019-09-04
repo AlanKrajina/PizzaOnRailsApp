@@ -15,6 +15,7 @@
  */
  .a-primary{
     color:#CED0FB;
+    font-size: 17px;
 }
 
 .a-secondary{
@@ -76,4 +77,9 @@
     border-radius: 25px;
     border: 2px solid rgb(85, 94, 52);
     padding: 5px; 
+}
+
+.user{
+    color:rgba(255, 184, 162, 0.6) ;
+    font-size: 40px;
 }

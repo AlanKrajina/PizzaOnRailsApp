@@ -39,7 +39,7 @@
     <%= f.fields_for :rating do |v|%>
   
         <%= v.label :stars, class: "a-forth"  %>
-        <%= v.number_field :stars, max:5 %>
+        <%= v.number_field :stars, min:0, max:5 %>
   
         <%= v.label :comment, class: "a-forth"  %>
         <%= v.text_field :comment %>

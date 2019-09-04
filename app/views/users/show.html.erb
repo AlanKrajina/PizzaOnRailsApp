@@ -1,4 +1,4 @@
-<h1><em><font color="red">Welcome <%= @user.name %></font><em></h1>
+<h1 class= "user"><em>Welcome <%= @user.name %><em></h1>
 
 <% if @user.admin %>
 <p>ADMIN</p>
@@ -7,6 +7,8 @@
 <p class= "a-primary">Email: <%= @user.email %></p>
 
 <p><%= link_to '--> Create a new Pizza <--', new_user_pizza_path(@user.id), class: "a-primary" %></p>
+
+<% if Pizza.exists?(user_id: current_user.id) %>
 
 <h2><em><font color="white">Here are all your pizzas:</font><em></h2>
 
@@ -54,6 +56,6 @@
     <h3 class= "a-secondary" ><%= link_to "Delete Pizza", pizza_path(pizza), method: :delete%></h3>
 
     <% end %>
-<p>--------------------------------------------------------------------------------------------------------</p>
+  <% end %>
   <% end %>
 </div>
