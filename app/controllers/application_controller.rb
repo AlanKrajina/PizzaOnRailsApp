@@ -1,12 +1,5 @@
 class ApplicationController < ActionController::Base
     helper_method :admin_only, :current_user, :require_login
-
-    def admin_only
-        unless current_user.admin
-   #       flash[:notice] = "You must be an admin to perform that function!"
-          redirect_to user_path(current_user)
-        end
-      end
     
       def require_login
     

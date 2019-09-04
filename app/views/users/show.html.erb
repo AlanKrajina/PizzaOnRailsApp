@@ -1,9 +1,5 @@
 <h1 class= "user"><em>Welcome <%= @user.name %><em></h1>
 
-<% if @user.admin %>
-<p>ADMIN</p>
-<% end %>
-
 <p class= "a-primary">Email: <%= @user.email %></p>
 
 <p><%= link_to '--> Create a new Pizza <--', new_user_pizza_path(@user.id), class: "a-primary" %></p>
