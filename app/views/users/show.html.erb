@@ -1,11 +1,59 @@
-<h1><em><font color="white">Welcome <%= @user.name %></font><em></h1>
+<h1><em><font color="red">Welcome <%= @user.name %></font><em></h1>
 
 <% if @user.admin %>
 <p>ADMIN</p>
 <% end %>
 
-
 <p class= "a-primary">Email: <%= @user.email %></p>
 
-<p><%= link_to 'Create a new Pizza', new_user_pizza_path(@user.id), class: "a-primary" %></p>
+<p><%= link_to '--> Create a new Pizza <--', new_user_pizza_path(@user.id), class: "a-primary" %></p>
 
+<h2><em><font color="white">Here are all your pizzas:</font><em></h2>
+
+<div class= "a-six" >
+
+<% Pizza.all.each do |pizza| %>
+
+<% if pizza.user == current_user %>
+
+<div>
+<h1  class= "a-name"><em><%= pizza.name %><em></h1>
+  <p class= "a-show" >Delivery Address: <%= pizza.delivery_address %></p>
+  <p class= "a-show" >Delivery Notes: <%= pizza.delivery_notes %></p>
+</div>
+
+<ul>
+<% pizza.meats.each do |meat| %>
+    <li class= "a-show" ><%= meat.name %></li>
+<% end %>
+</ul>
+
+<ul>
+<% pizza.cheeses.each do |cheese| %>
+    <li class= "a-show" ><%= cheese.name %></li>
+<% end %>
+</ul>
+
+<ul>
+<% pizza.toppings.each do |topping| %>
+    <li class= "a-show" ><%= topping.name %></li>
+<% end %>
+</ul>
+
+<ul>
+<% pizza.dips.each do |dip| %>
+    <li class= "a-show" ><%= dip.name %></li>
+<% end %>
+</ul>
+
+    <h4 class= "a-forth" >Pizza stars: *<%= pizza.rating.stars %></h4>
+    <h4 class= "a-forth" >Pizza comment: <%= pizza.rating.comment %></h4>
+
+
+    <h3 class= "a-secondary" ><%= link_to "Edit Pizza", edit_pizza_path(pizza)%></h3>
+    <h3 class= "a-secondary" ><%= link_to "Delete Pizza", pizza_path(pizza), method: :delete%></h3>
+
+    <% end %>
+<p>--------------------------------------------------------------------------------------------------------</p>
+  <% end %>
+</div>

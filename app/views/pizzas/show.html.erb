@@ -1,9 +1,11 @@
+<div class= "a-six" >
+
 <% if @pizza.user == current_user %>
 
 <div>
 <h1><em><font color="white"><%= @pizza.name %></font><em></h1>
-  <p class= "a-secondary" ><%= @pizza.delivery_address %></p>
-  <p class= "a-secondary" ><%= @pizza.delivery_notes %></p>
+  <p class= "a-secondary" >Delivery Address: <%= @pizza.delivery_address %></p>
+  <p class= "a-secondary" >Delivery Notes: <%= @pizza.delivery_notes %></p>
 </div>
 
 <ul>
@@ -72,3 +74,4 @@
       <h2>Pizza comment: <%= @pizza.rating.comment %></h2>
 
   <% end %>
+  </div>
