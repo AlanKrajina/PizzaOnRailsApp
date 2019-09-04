@@ -1,8 +1,9 @@
+<h2>All pizzas from all users:</h2>
 
 <% @pizzas.each do |pizza| %>
-    <h2><%= link_to pizza.name, pizza_path(pizza) %></h2>
+    <h3><%= link_to pizza.name, pizza_path(pizza) %></h3>
 
-    <p>All Pizzas by: <strong><%= link_to pizza.user.name, user_pizzas_path(pizza.user) %></strong></p>
+    <p>Pizza maker: <strong><%= link_to pizza.user.name, user_pizzas_path(pizza.user) %></strong></p>
 
     <h4>Pizza stars: *<%= pizza.rating.stars %></h4>
     <h4>Pizza comment: <%= pizza.rating.comment %></h4>

@@ -7,5 +7,50 @@
 
 <p>Email: <%= @user.email %></p>
 
-<%= link_to 'New Pizza', new_user_pizza_path(@user.id) %>
+<%= link_to 'Create a new pizza', new_user_pizza_path(@user.id) %>
 
+
+
+<h3>All your pizzas:</h3>
+
+
+<% if @pizza.user == current_user %>
+
+<div>
+  <h4><%= @pizza.name %></h4>
+  <p><%= @pizza.delivery_address %></p>
+  <p><%= @pizza.delivery_notes %></p>
+</div>
+
+<ul>
+<% @pizza.meats.each do |meat| %>
+    <li><%= meat.name %></li>
+<% end %>
+</ul>
+
+<ul>
+<% @pizza.cheeses.each do |cheese| %>
+    <li><%= cheese.name %></li>
+<% end %>
+</ul>
+
+<ul>
+<% @pizza.toppings.each do |topping| %>
+    <li><%= topping.name %></li>
+<% end %>
+</ul>
+
+<ul>
+<% @pizza.dips.each do |dip| %>
+    <li><%= dip.name %></li>
+<% end %>
+</ul>
+
+    <h4>Pizza stars: *<%= @pizza.rating.stars %></h4>
+    <h4>Pizza comment: <%= @pizza.rating.comment %></h4>
+
+
+    <%= link_to "Edit Pizza", edit_pizza_path(@pizza) %>
+    <%= link_to "Delete Pizza", pizza_path(@pizza), method: :delete  %>
+
+  <% end %>
