@@ -21,3 +21,16 @@
     color:#81F7E1;
 }
 
+.a-third{
+    color:#0E1896;
+    background-color:rgba(202, 162, 29, 0.6) ;
+    margin-right: 70em;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 5px; 
+
+
+}
+.a-forth{
+    color:red;
+}

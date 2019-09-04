@@ -1,0 +1,51 @@
+<%= form_for @pizza do |f| %>
+    <div>
+    <%= f.label :name, class: "a-primary" %>
+    <%= f.text_field :name %>
+    </div></br>
+    <div>
+    <%= f.label :delivery_address, class: "a-primary" %>
+    <%= f.text_field :delivery_address %>
+    </div></br>
+    <div>
+    <%= f.label :delivery_notes, class: "a-primary" %>
+    <%= f.text_field :delivery_notes %>
+    </div></br>
+  
+    <div><p class= "a-secondary" ><strong>Select meat:</strong><p>
+    <p class= "a-third" ><%= f.collection_check_boxes :meat_ids, Meat.all, :id, :name %><p>
+    </div></br>
+  
+    <div><p class= "a-secondary" ><strong>Select cheese:</strong><p>
+    <p class= "a-third" ><%= f.collection_check_boxes :cheese_ids, Cheese.all, :id, :name %><p>
+    </div></br>
+  
+    <div><p class= "a-secondary" ><strong>Select toppings:</strong><p>
+    <p class= "a-third" ><%= f.collection_check_boxes :topping_ids, Topping.all, :id, :name %><p>
+    </div></br>
+  
+    <div><p class= "a-secondary" ><strong>Select dips:</strong><p>
+    <p class= "a-third" ><%= f.collection_check_boxes :dip_ids, Dip.all, :id, :name %><p>
+    </div></br>
+  
+    <div><p class= "a-secondary" ><strong>Select drinks:</strong><p>
+    <p class= "a-third" ><%= f.collection_check_boxes :drink_ids, Drink.all, :id, :name %><p>
+    </div></br>
+  
+  
+    <h4 class= "a-forth" >Create a rating between 0-5 with a comment for others to see:</h4>
+  
+    <%= f.fields_for :rating do |v|%>
+  
+        <%= v.label :stars, class: "a-forth"  %>
+        <%= v.number_field :stars, max:5 %>
+  
+        <%= v.label :comment, class: "a-forth"  %>
+        <%= v.text_field :comment %>
+    <% end %>
+  
+  <br><br>
+  
+  <%= f.submit %>
+  
+  <% end %>
