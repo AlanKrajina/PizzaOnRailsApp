@@ -23,6 +23,12 @@
     font-size: 23px;
 }
 
+.a-primary3{
+    color:rgb(0, 19, 128);
+    font-size: 23px;
+    font-weight: bold;
+}
+
 .a-secondary{
     color:#81F7E1;
 }
@@ -49,7 +55,6 @@
     color:rgba(4, 12, 133, 0.6);
     font-weight: bold;
     padding-top: 40px;
-
 }
 
 .a-show{
@@ -118,17 +123,17 @@
     color: black;
   }
   
-  .a-error{
+.a-error{
     color:red;
     background-color:rgba(206, 184, 110, 0.6) ;
     margin-right: 80em;
 }
 
-
 .a-name1{
     color:rgba(4, 12, 133, 0.6);
     font-weight: bold;
     font-size: 35px;
+    margin-top: 15px;
 }
 
 .a-google{
@@ -138,6 +143,7 @@
 }
 
 
+/* Table */
 table.blueTable {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     border: 1px solid #1C6EA4;
