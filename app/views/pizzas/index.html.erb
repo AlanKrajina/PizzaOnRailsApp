@@ -16,3 +16,10 @@
 </tbody>
 </tr>
 </table>
+
+<%= form_tag("/pizzas", method: "get") do %>
+<%= label_tag(:delivery_address, "Search pizza by address") %>
+  <%= text_field_tag(:delivery_address) %>
+  <%= submit_tag("Search") %>
+<% end %>
+

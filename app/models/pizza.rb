@@ -13,6 +13,8 @@ class Pizza < ApplicationRecord
     validate :at_least_one_ingredient
     validate :name_delivery_address
 
+    scope :search_by_address, -> (search_address){where("delivery_address = ?", search_address)}
+    
     def at_least_one_ingredient
       if [self.meats, self.cheeses, self.dips, self.toppings, self.drinks].reject(&:blank?).size == 0
         errors[:base] << ("Please choose at least one meat, cheese, dip, topping or drink - we don't want to send you empty pizza crust. :)")
@@ -24,5 +26,4 @@ class Pizza < ApplicationRecord
         errors[:base] << ("Please submit a pizza name and delivery address.")
       end
     end 
-
 end
