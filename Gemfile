@@ -26,10 +26,10 @@ gem 'jbuilder', '~> 2.7'
 
  #omniauth gems
 
- #gem 'omniauth'
- #gem 'omniauth-google-oauth2'
+ gem 'omniauth'
+ gem 'omniauth-google-oauth2'
  #gem 'omniauth-github'
- #gem 'dotenv-rails'
+ gem 'dotenv-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

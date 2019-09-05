@@ -132,7 +132,11 @@
     font-size: 35px;
 }
 
-
+.a-google{
+    color:rgba(179, 183, 241, 0.6);
+    font-weight: bold;
+    font-size: 25px;
+}
 
 
 table.blueTable {
