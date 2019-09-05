@@ -1,4 +1,3 @@
-<% @pizzas.each do |pizza|  %>
 <table class="blueTable">
 <thead>
 <tr>
@@ -8,10 +7,12 @@
 <th>Comment</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
+<% @pizzas.each do |pizza|  %>
 <td><%= link_to pizza.name, pizza_path(pizza) %></td><td><%= link_to pizza.user.name, user_pizzas_path(pizza.user) %></td><td>*<%= pizza.rating.stars %></td><td><%= pizza.rating.comment %></td></tr>
+<% end %>
 </tbody>
 </tr>
 </table>
-<% end %>
