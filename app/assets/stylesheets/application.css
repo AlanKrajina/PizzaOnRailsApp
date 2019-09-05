@@ -32,7 +32,7 @@
     background-color:rgba(207, 189, 127, 0.7) ;
     margin-right: 80em;
     border-radius: 25px;
-    border: 2px solid rgb(85, 94, 52);
+    border: 2px solid rgb(148, 125, 76);
     padding: 5px; 
 }
 
@@ -45,14 +45,7 @@
     font-size: 40px;
 }
 
-.a-fifth{
-    color:#0E1896;
-    background-color:rgba(207, 189, 127, 0.7) ;
-    margin-right: 70em;
-    border-radius: 25px;
-    border: 2px solid rgb(85, 94, 52);
-    padding: 5px; 
-}
+
 
 .a-name{
     color:rgba(4, 12, 133, 0.6);
@@ -80,6 +73,12 @@
     font-weight: bold;
     font-size: 55px;
     padding-top: 40px;
+}
+
+.a-home2{
+    color:rgba(56, 2, 2, 0.6);
+    font-weight: bold;
+    font-size: 55px;
 }
 
 .user{
@@ -121,3 +120,14 @@
     color: black;
   }
   
+  .a-error{
+    color:red;
+    background-color:rgba(206, 184, 110, 0.6) ;
+    margin-right: 80em;
+}
+
+.a-name1{
+    color:rgba(4, 12, 133, 0.6);
+    font-weight: bold;
+    font-size: 35px;
+}

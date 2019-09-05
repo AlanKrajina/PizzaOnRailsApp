@@ -1,4 +1,4 @@
-<h1 class= "a-home"><em>Welcome <%= @user.name %><em></h1>
+<h1 class= "a-home2"><em>Welcome <%= @user.name %><em></h1>
 
 <p class= "a-primary">Email: <%= @user.email %></p>
 
@@ -15,10 +15,11 @@
 <% if pizza.user == current_user %>
 
 <div>
-<h1  class= "a-name"><em><%= pizza.name %><em></h1>
+<h1  class= "a-name1"><em><%= pizza.name %><em></h1>
   <p class= "a-show" >Delivery Address: <%= pizza.delivery_address %></p>
   <p class= "a-show" >Delivery Notes: <%= pizza.delivery_notes %></p>
 </div>
+<h2 class= "a-show" >All Ingredients: </h2>
 
 <ul>
 <% pizza.meats.each do |meat| %>

@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
     def name_email_req
       if [self.name, self.email].reject(&:blank?).size == 0
-        errors[:base] << ("Please submit all a name and email to sign up.")
+        errors[:base] << ("Extra info* To create a User all details are needed.")
       end
     end 
 
