@@ -69,17 +69,18 @@
 }
 
 .a-home{
-    color:rgba(255, 255, 255, 0.6);
+    color:rgba(56, 2, 2, 0.6);
     font-weight: bold;
-    font-size: 60px;
-    background-color:rgba(206, 184, 110, 0.6) ;
-    margin-right: 14em;
-    border-radius: 25px;
-    border: 2px solid rgb(85, 94, 52);
-    padding: 5px; 
+    font-size: 55px;
 }
 
 .user{
     color:rgba(255, 184, 162, 0.6) ;
     font-size: 40px;
+}
+
+.a-sign{
+    color:rgba(34, 1, 1, 0.6);
+    font-weight: bold;
+    font-size: 20px;
 }

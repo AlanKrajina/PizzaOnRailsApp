@@ -2,16 +2,17 @@
 
 <%= render 'layouts/user_login_error' %>
 
-
+<div class= "a-name">
 <%= form_for @user do |f| %>
   <%= f.label :name , class: "a-primary"%>
   <%= f.text_field :name %><br />
-
+  </br>
   <%= f.label :email , class: "a-primary"%>
   <%= f.text_field :email %><br />
-  
+  </br>
   <%= f.label :password , class: "a-primary"%>
   <%= f.password_field :password  %><br />
   </br>
   <%= f.submit %>
 <% end %>
+</div>
