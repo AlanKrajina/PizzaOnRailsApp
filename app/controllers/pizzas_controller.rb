@@ -25,25 +25,16 @@ class PizzasController < ApplicationController
   end
     
   def show
-    @pizza = Pizza.find_by(id: params[:id])
-    if !@pizza
-      redirect_to pizzas_path
-    end
+    find_pizza
   end
         
   def edit
-    @pizza = Pizza.find_by(id: params[:id])
-    if !@pizza
-      redirect_to pizzas_path
-    end  
+    find_pizza
   end
 
   def update
-    @pizza = Pizza.find_by(id: params[:id])
-    if !@pizza
-      redirect_to pizzas_path
-    end
-        if @pizza.update(pizza_params)
+    find_pizza
+    if @pizza.update(pizza_params)
       redirect_to pizza_path(@pizza)
     else
       render :edit
@@ -51,15 +42,19 @@ class PizzasController < ApplicationController
   end
 
   def destroy
-     @pizza = Pizza.find_by(id: params[:id])
-    if !@pizza
-      redirect_to pizzas_path
-    end
+    find_pizza
     @pizza.destroy
     redirect_to user_path(current_user)
   end
 
   private
+
+  def find_pizza
+    @pizza = Pizza.find_by(id: params[:id])
+    if !@pizza
+      redirect_to pizzas_path
+    end
+  end
 
   def pizza_params
     params.require(:pizza).permit(:name, :delivery_address, :delivery_notes, meat_ids: [], cheese_ids: [], drink_ids: [], topping_ids: [], dip_ids: [], topping_ids: [], rating_attributes: [:stars, :comment] )
