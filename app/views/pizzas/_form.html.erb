@@ -38,10 +38,10 @@
 <h2 class= "a-secondary" >Create a rating between 0-5 with a comment for others to see:</h2>
   
 <%= f.fields_for :rating do |v|%>
-    <%= v.label :stars, class: "a-secondary" %>
+    <%= v.label :stars, class: "a-secondary" %></br>
     <%= v.number_field :stars, min:0, max:5 %>
-  
-    <%= v.label :comment, class: "a-secondary" %>
+    </br>
+    <%= v.label :comment, class: "a-secondary" %></br>
     <%= v.text_field :comment %>
 <% end %>
 <br><br>
