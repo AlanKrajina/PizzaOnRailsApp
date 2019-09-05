@@ -1,19 +1,14 @@
 <h1 class= "a-home2"><em>Welcome <%= @user.name %><em></h1>
-
 <p class= "a-primary">Email: <%= @user.email %></p>
-
 <p><%= link_to '--> Create a new Pizza <--', new_user_pizza_path(@user.id), class: "a-primary2" %></p>
 
-<% if Pizza.exists?(user_id: current_user.id) %>
 
+<% if Pizza.exists?(user_id: current_user.id) %>
 <h2><em><font color="white">Here are all your pizzas:</font><em></h2>
 
 <div class= "a-six" >
-
 <% Pizza.all.each do |pizza| %>
-
 <% if pizza.user == current_user %>
-
 <div>
 <h1  class= "a-name1"><em><%= pizza.name %><em></h1>
   <p class= "a-show" >Delivery Address: <%= pizza.delivery_address %></p>
@@ -47,7 +42,6 @@
 
     <h4 class= "a-forth" >Pizza stars: *<%= pizza.rating.stars %></h4>
     <h4 class= "a-forth" >Pizza comment: <%= pizza.rating.comment %></h4>
-
 
     <h3 class= "a-secondary" ><%= link_to "Edit Pizza", edit_pizza_path(pizza)%></h3>
     <h3 class= "a-secondary" ><%= link_to "Delete Pizza", pizza_path(pizza), method: :delete%></h3>

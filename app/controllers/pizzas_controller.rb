@@ -19,7 +19,6 @@ class PizzasController < ApplicationController
         def create
             @pizza = current_user.pizzas.build(pizza_params)
 
-         #   binding.pry
             if @pizza.save
               redirect_to pizza_path(@pizza)
             else
@@ -64,7 +63,7 @@ class PizzasController < ApplicationController
       redirect_to pizzas_path
     end
     @pizza.destroy
-    redirect_to pizzas_path
+    redirect_to user_path(current_user)
   end
 
 

@@ -36,43 +36,38 @@
     <h4 class= "a-forth" >Pizza stars: *<%= @pizza.rating.stars %></h4>
     <h4 class= "a-forth" >Pizza comment: <%= @pizza.rating.comment %></h4>
 
-
     <h3 class= "a-secondary" ><%= link_to "Edit Pizza", edit_pizza_path(@pizza)%></h3>
     <h3 class= "a-secondary" ><%= link_to "Delete Pizza", pizza_path(@pizza), method: :delete%></h3>
 
-
-
 <% else %>
     <div>
-    <h4><%= @pizza.name %></h4>
-  </div>
-  
+    <p class= "a-name1"><em><%= @pizza.name %><em></p>
+    </div>
+<h2 class= "a-show" >All Ingredients: </h2>
   <ul>
   <% @pizza.meats.each do |meat| %>
-      <li><%= meat.name %></li>
+      <li class= "a-show"><%= meat.name %></li>
   <% end %>
   </ul>
   
   <ul>
   <% @pizza.cheeses.each do |cheese| %>
-      <li><%= cheese.name %></li>
+      <li class= "a-show"><%= cheese.name %></li>
   <% end %>
   </ul>
   
   <ul>
   <% @pizza.toppings.each do |topping| %>
-      <li><%= topping.name %></li>
+      <li class= "a-show"><%= topping.name %></li>
   <% end %>
   </ul>
   
   <ul>
   <% @pizza.dips.each do |dip| %>
-      <li><%= dip.name %></li>
+      <li class= "a-show"><%= dip.name %></li>
   <% end %>
   </ul>
-  
-      <h2>Pizza stars: *<%= @pizza.rating.stars %></h2>
-      <h2>Pizza comment: <%= @pizza.rating.comment %></h2>
-
+      <h4 class= "a-forth" >Pizza stars: *<%= @pizza.rating.stars %></h4>
+      <h4 class= "a-forth" >Pizza comment: <%= @pizza.rating.comment %></h4>
   <% end %>
   </div>

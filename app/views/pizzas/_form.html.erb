@@ -27,29 +27,25 @@
     <p class= "a-third" ><%= f.collection_check_boxes :topping_ids, Topping.all, :id, :name %><p>
     </div></br>
   
-    <div><p class= "a-secondary" ><strong>Select dips:</strong><p>
-    <p class= "a-third" ><%= f.collection_check_boxes :dip_ids, Dip.all, :id, :name %><p>
-    </div></br>
+<div><p class= "a-secondary" ><strong>Select dips:</strong><p>
+<p class= "a-third" ><%= f.collection_check_boxes :dip_ids, Dip.all, :id, :name %><p>
+</div></br>
   
-    <div><p class= "a-secondary" ><strong>Select drinks:</strong><p>
-    <p class= "a-third" ><%= f.collection_check_boxes :drink_ids, Drink.all, :id, :name %><p>
-    </div></br>
+<div><p class= "a-secondary" ><strong>Select drinks:</strong><p>
+<p class= "a-third" ><%= f.collection_check_boxes :drink_ids, Drink.all, :id, :name %><p>
+</div></br>
+    
+<h2 class= "a-secondary" >Create a rating between 0-5 with a comment for others to see:</h2>
   
+<%= f.fields_for :rating do |v|%>
+    <%= v.label :stars, class: "a-secondary" %>
+    <%= v.number_field :stars, min:0, max:5 %>
   
-    <h2 class= "a-secondary" >Create a rating between 0-5 with a comment for others to see:</h2>
-  
-    <%= f.fields_for :rating do |v|%>
-  
-        <%= v.label :stars, class: "a-secondary"  %>
-        <%= v.number_field :stars, min:0, max:5 %>
-  
-        <%= v.label :comment, class: "a-secondary"  %>
-        <%= v.text_field :comment %>
-    <% end %>
-  
-  <br><br>
-  
-  <%= f.submit %>
-  <br><br>
-  <% end %>
-  </div>
+    <%= v.label :comment, class: "a-secondary" %>
+    <%= v.text_field :comment %>
+<% end %>
+<br><br>
+<%= f.submit %>
+<br><br>
+<% end %>
+</div>
