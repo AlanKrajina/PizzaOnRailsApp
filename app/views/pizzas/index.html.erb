@@ -1,35 +1,17 @@
-
-<div class= "a-seven" >
-
-<div class="container">
-  <div class="page-header">
-  </div>
-</div>
-<div class="container">
-  <table class="table table-striped newtable">
-    <thead>
-      <tr class="newtable">
-        <th>Pizza name...</th>
-        <th>Pizza maker...</th>
-        <th>Stars...</th>
-        <th>Comment...</th>
-
-      </tr>
-    </thead>
-    <tbody>
-      <% @pizzas.each do |pizza|  %>
-        <tr>
-
-        <td><%= link_to pizza.name, pizza_path(pizza) %></td>
-
-
-        <td><strong><%= link_to pizza.user.name, user_pizzas_path(pizza.user) %></strong>  </td>
-
-          <td>*<%= pizza.rating.stars %></td>
-          <td><%= pizza.rating.comment %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
-</div>
+<% @pizzas.each do |pizza|  %>
+<table class="blueTable">
+<thead>
+<tr>
+<th>Pizza name</th>
+<th>Pizza creator</th>
+<th>Stars</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><%= link_to pizza.name, pizza_path(pizza) %></td><td><%= link_to pizza.user.name, user_pizzas_path(pizza.user) %></td><td>*<%= pizza.rating.stars %></td><td><%= pizza.rating.comment %></td></tr>
+</tbody>
+</tr>
+</table>
+<% end %>

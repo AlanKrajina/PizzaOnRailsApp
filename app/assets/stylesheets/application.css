@@ -131,3 +131,56 @@
     font-weight: bold;
     font-size: 35px;
 }
+
+
+
+
+table.blueTable {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 42%;
+    text-align: left;
+    border-collapse: collapse;
+    opacity: 0.8;
+  }
+  table.blueTable td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+  }
+  table.blueTable tbody td {
+    font-size: 20px;
+  }
+  table.blueTable tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+  table.blueTable thead {
+    background: #A49715;
+    background: -moz-linear-gradient(top, #bbb14f 0%, #ada12c 66%, #A49715 100%);
+    background: -webkit-linear-gradient(top, #bbb14f 0%, #ada12c 66%, #A49715 100%);
+    background: linear-gradient(to bottom, #bbb14f 0%, #ada12c 66%, #A49715 100%);
+    border-bottom: 2px solid #444444;
+  }
+  table.blueTable thead th {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+  }
+  table.blueTable thead th:first-child {
+    border-left: none;
+  }
+  
+  table.blueTable tfoot td {
+    font-size: 14px;
+  }
+  table.blueTable tfoot .links {
+    text-align: right;
+  }
+  table.blueTable tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
