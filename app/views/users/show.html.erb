@@ -1,8 +1,8 @@
-<h1 class= "user"><em>Welcome <%= @user.name %><em></h1>
+<h1 class= "a-home"><em>Welcome <%= @user.name %><em></h1>
 
 <p class= "a-primary">Email: <%= @user.email %></p>
 
-<p><%= link_to '--> Create a new Pizza <--', new_user_pizza_path(@user.id), class: "a-primary" %></p>
+<p><%= link_to '--> Create a new Pizza <--', new_user_pizza_path(@user.id), class: "a-primary2" %></p>
 
 <% if Pizza.exists?(user_id: current_user.id) %>
 

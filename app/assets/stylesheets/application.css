@@ -15,7 +15,12 @@
  */
  .a-primary{
     color:#CED0FB;
-    font-size: 17px;
+    font-size: 20px;
+}
+
+.a-primary2{
+    color:rgb(147, 220, 253);
+    font-size: 23px;
 }
 
 .a-secondary{
@@ -52,6 +57,8 @@
 .a-name{
     color:rgba(4, 12, 133, 0.6);
     font-weight: bold;
+    padding-top: 40px;
+
 }
 
 .a-show{
@@ -72,6 +79,7 @@
     color:rgba(56, 2, 2, 0.6);
     font-weight: bold;
     font-size: 55px;
+    padding-top: 40px;
 }
 
 .user{
@@ -84,3 +92,32 @@
     font-weight: bold;
     font-size: 20px;
 }
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color:rgba(206, 184, 110, 0.6) ;
+    border-radius: 15px;
+
+
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 15%; /* Full width */
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1px 37px;
+    text-decoration: none;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  

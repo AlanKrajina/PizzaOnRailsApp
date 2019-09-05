@@ -1,8 +1,9 @@
+<div class= "a-name">
+
 <h1><em><font color="white">Sign Up</font><em></h1>
 
 <%= render 'layouts/user_login_error' %>
 
-<div class= "a-name">
 <%= form_for @user do |f| %>
   <%= f.label :name , class: "a-primary"%>
   <%= f.text_field :name %><br />
