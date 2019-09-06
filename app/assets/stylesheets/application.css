@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ 
  .a-primary{
     color:#CED0FB;
     font-size: 20px;
@@ -36,7 +37,7 @@
 .a-six{
     color:#0E1896;
     background-color:rgba(207, 189, 127, 0.7) ;
-    margin-right: 80em;
+    margin-right: 1280px;
     border-radius: 25px;
     border: 2px solid rgb(148, 125, 76);
     padding: 5px; 
@@ -122,8 +123,12 @@
     background: #ddd;
     color: black;
   }
-  
-.a-error{
+
+.fields_with_errors{
+    color:red;
+}
+
+.fields_with_errors2{
     color:red;
     background-color:rgba(206, 184, 110, 0.6) ;
     margin-right: 80em;
@@ -193,3 +198,5 @@ table.blueTable {
     padding: 2px 8px;
     border-radius: 5px;
   }
+
+/* Media queries to be added additionally, for now full screen only */
