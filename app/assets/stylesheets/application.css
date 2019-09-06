@@ -104,7 +104,7 @@
 
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    width: 15%; /* Full width */
+    width: 277px; /* Full width */
   }
   
   /* Links inside the navbar */
