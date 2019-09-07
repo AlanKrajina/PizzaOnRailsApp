@@ -1,5 +1,7 @@
 # PizzaOnRailsApp
 
+In this project I have build a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. The goal of the application is to build a Content Management System.
+
 The app provides a database and web interface for users to:
 
 - Sign up, login or log out securely as user.
