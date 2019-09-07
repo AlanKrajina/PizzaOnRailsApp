@@ -1,5 +1,60 @@
 # PizzaOnRailsApp
 
+The app provides a database and web interface for users to:
+
+- Sign up, login or log out securely as user.
+- This app includes a third party signup/login via Google thanks to the OmniAuth gem.
+- User can see all pizzas but can only create, update, and delete (CRUD) his own created pizza. 
+- User can browse pizzas via delivery address.
+- User and pizza inputs are validated.
+
+## Prerequisites
+
+You will need to have the following installed on your computer in order to use RecipeManager:
+
+- Ruby
+- Rails 5+
+- bundler
+
+$ sudo gem install bundler
+
+## Installation
+
+To install this app onto your local machine:
+
+- Fork and clone this repository with HTTPS
+
+- Open your terminal and change to the local directory where you want to clone your repository and run:
+
+$ git clone + git@github.com:AlanKrajina/PizzaOnRailsApp.git
+
+$ cd PizzaOnRailsApp
+
+- After checking out the repository, run the following code and automatically a file will be created or updated in your directory: Gemfile.lock with all the gems installed.
+
+$ bundle install
+
+- If you get any yarn errors run:
+
+$ yarn install --check-files
+
+- Set up the database:
+
+$ rake db:create
+$ rake db:migrate
+
+The app uses the dotenv gem for environment variables. Create a .env file in the root of the app and add GOOGLE_CLIENT_ID=your_key and GOOGLE_CLIENT_SECRET=your_secret. If you do not already have a Google account, you will need to do so in order to get these keys through Oauth on Google for developers, in order to log in through Google.
+
+## Usage
+
+- Run rails s and navigate to http://localhost:3000.
+
+$ rails s
+
+- You can play with and create data via your console: rails c.
+
+$ rails c
+
 ## Requirements
 
 - Use the Ruby on Rails framework.
