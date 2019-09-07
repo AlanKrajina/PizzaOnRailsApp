@@ -35,8 +35,6 @@
     font-weight: bold;
 }
 
-
-
 .a-forth{
     color:red;
 }
@@ -125,6 +123,9 @@
 
 .fields_with_errors{
     color:red;
+    background-color:rgba(206, 184, 110, 0.6) ;
+    width: 500px;
+    padding-right: 10px;
 }
 
 .fields_with_errors2{
