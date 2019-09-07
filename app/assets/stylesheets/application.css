@@ -135,16 +135,14 @@
 }
 
 .a-name1{
-    color:rgba(4, 12, 133, 0.6);
+    color:rgba(36, 80, 175, 0.6);
     font-weight: bold;
-    font-size: 35px;
-    margin-top: 15px;
 }
 
 .a-name2{
-    color:rgb(255, 230, 230);
+    color:rgba(82, 48, 4, 0.6);
     font-weight: bold;
-    font-size: 35px;
+    font-size: 39px;
     margin-top: 15px;
 }
 
@@ -154,6 +152,13 @@
     font-size: 25px;
 }
 
+.a-six{
+    background-color:rgba(207, 189, 127, 0.6) ;	    
+    border-radius: 25px;	   
+    border: 2px solid rgb(148, 125, 76);	
+    padding: 5px; 	
+    width: 450px;  
+}
 
 /* Table */
 table.blueTable {
@@ -206,4 +211,3 @@ table.blueTable {
     border-radius: 5px;
   }
 
-/* Media queries to be added additionally, for now full screen only */

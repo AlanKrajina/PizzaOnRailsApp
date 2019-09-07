@@ -6,7 +6,7 @@
 <% if Pizza.exists?(user_id: current_user.id) %>
 <h2><em><font color="white">Here are all your pizzas:</font><em></h2>
 
-<div class= "a-six" >
+<div>
 <% Pizza.all.each do |pizza| %> 
 <% @pizza = pizza %>
 
