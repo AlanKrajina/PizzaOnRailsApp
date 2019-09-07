@@ -1,10 +1,10 @@
 <% if @pizza.errors.any? %>
-  <div id="error_explanation">
-    <h2><font color="red"><%= pluralize(@pizza.errors.count, "error") %> prohibited this pizza from being created:</font></h2>
+  <div class = "fields_with_errors">
+    <h2><%= pluralize(@pizza.errors.count, "error") %> prohibited this pizza from being created:</font></h2>
  
     <ul>
     <% @pizza.errors.full_messages.each do |msg| %>
-      <li><em><font color="red"><%= msg %></font><em></li></br>
+      <li><em><%= msg %><em></li></br>
     <% end %>
     </ul>
   </div>

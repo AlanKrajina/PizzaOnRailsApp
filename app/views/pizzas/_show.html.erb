@@ -1,10 +1,10 @@
-<p>--------------------------------------------------------------------------------------------------------</p>
+<p>--------------------------------------------------------------------------</p>
 <div>
-  <p class= "a-name1"><em><%= @pizza.name %><em></p>
+  <p class= "a-name2"><em><%= @pizza.name %><em></p>
   <p class= "a-show" >Delivery Address: <%= @pizza.delivery_address %></p>
   <p class= "a-show" >Delivery Notes: <%= @pizza.delivery_notes %></p>
 </div>
-<h2 class= "a-show" >All Ingredients: </h2>
+<h2 class= "a-secondary" >All Ingredients: </h2>
 
 <ul>
 <% @pizza.meats.each do |meat| %>
@@ -30,9 +30,9 @@
 <% end %>
 </ul>
 
-<h4 class= "a-forth" >Pizza stars: *<%= @pizza.rating.stars %></h4>
-<h4 class= "a-forth" >Pizza comment: <%= @pizza.rating.comment %></h4>
+<h4 class= "a-secondary" >Pizza stars: *<%= @pizza.rating.stars %></h4>
+<h4 class= "a-secondary" >Pizza comment: <%= @pizza.rating.comment %></h4>
 
 <h3 class= "a-secondary" ><%= link_to "Edit Pizza", edit_pizza_path(@pizza)%></h3>
 <h3 class= "a-secondary" ><%= link_to "Delete Pizza", pizza_path(@pizza), method: :delete%></h3>
-<p>--------------------------------------------------------------------------------------------------------</p>
+<p>--------------------------------------------------------------------------</p>

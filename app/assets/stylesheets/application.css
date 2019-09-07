@@ -31,17 +31,11 @@
 }
 
 .a-secondary{
-    color:#81F7E1;
+    color:rgb(94, 223, 199);
+    font-weight: bold;
 }
 
-.a-six{
-    color:#0E1896;
-    background-color:rgba(207, 189, 127, 0.7) ;
-    margin-right: 1280px;
-    border-radius: 25px;
-    border: 2px solid rgb(148, 125, 76);
-    padding: 5px; 
-}
+
 
 .a-forth{
     color:red;
@@ -59,6 +53,11 @@
 }
 
 .a-show{
+    color:rgba(4, 12, 133, 0.6);
+    font-weight: bold;
+}
+
+.a-show2{
     color:rgba(2, 42, 92, 0.6);
     font-weight: bold;
 }
@@ -136,6 +135,13 @@
 
 .a-name1{
     color:rgba(4, 12, 133, 0.6);
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.a-name2{
+    color:rgb(255, 230, 230);
     font-weight: bold;
     font-size: 35px;
     margin-top: 15px;
