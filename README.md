@@ -1,13 +1,14 @@
 # PizzaOnRailsApp
 
 In this project I have build a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. The goal of the application is to build a Content Management System.
+There is no emphasis on HTML or CSS, and there is no JS required for the project. I added some CSS just to get a basic look for the App.
 
 The app provides a database and web interface for users to:
 
 - Sign up, login or log out securely as user.
 - This app includes a third party signup/login via Google thanks to the OmniAuth gem.
 - User can see all pizzas but can only create, update, and delete (CRUD) his own created pizza. 
-- User can browse pizzas via delivery address.
+- User can browse pizzas via name.
 - User and pizza inputs are validated.
 
 ## Prerequisites
