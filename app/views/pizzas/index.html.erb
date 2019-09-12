@@ -18,8 +18,8 @@
 </table>
 
 <%= form_tag("/pizzas", method: "get") do %>
-<%= label_tag(:delivery_address, "Search pizza by address") %>
-  <%= text_field_tag(:delivery_address) %>
+<%= label_tag(:name, "Search pizza by name") %>
+  <%= text_field_tag(:name) %>
   <%= submit_tag("Search") %>
 <% end %>
 

@@ -13,7 +13,7 @@ class Pizza < ApplicationRecord
     validate :at_least_one_ingredient
     validate :name_delivery_address
 
-    scope :search_by_address, -> (search_address){where("delivery_address = ?", search_address)}
+    scope :search_by_name, -> (search_name){where("name = ?", search_name)}
     
     def at_least_one_ingredient
       if [self.meats, self.cheeses, self.dips, self.toppings, self.drinks].reject(&:blank?).size == 0

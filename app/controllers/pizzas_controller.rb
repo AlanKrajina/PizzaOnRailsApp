@@ -3,8 +3,8 @@ class PizzasController < ApplicationController
   def index
     if params[:user_id]
       @pizzas = User.find(params[:user_id]).pizzas
-    elsif params[:delivery_address]
-      @pizzas = Pizza.search_by_address(params[:delivery_address])
+    elsif params[:name]
+      @pizzas = Pizza.search_by_name(params[:name])
     else
       @pizzas = Pizza.all
     end
