@@ -98,5 +98,3 @@ $ rails c
 -> Follow patterns in the Rails Style Guide and the Ruby Style Guide.
 
 - Blog explaining the way requirements are met: https://alankrajina.github.io/pizzaonrailsapp_-_rails_project
-
-- Short video demo with narration describing how a user would interact with application: https://youtu.be/Kd50Mec400g
