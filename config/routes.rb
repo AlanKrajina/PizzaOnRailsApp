@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     resources :pizzas, only: [:new, :create, :index]
   end
 
+  get "/bestuser", to: "users#best_users", as: "best_users"
+
+
   root "static_pages#home"
 
   get '/signup' => 'users#new'

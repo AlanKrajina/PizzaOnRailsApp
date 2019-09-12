@@ -19,6 +19,12 @@ class UsersController < ApplicationController
         @pizza = Pizza.all
       end
     
+      def best_users
+        @users = User.joins(:pizzas).group(:id).order('COUNT(pizzas.id) DESC').limit(2)
+        render :best_users
+
+      end
+
       private
 
       def user_params
