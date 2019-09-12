@@ -1,3 +1,5 @@
+<% if logged_in? %>
+
 <h1 class= "a-home2"><em>Welcome <%= @user.name %><em></h1>
 <p class= "a-primary">Email: <%= @user.email %></p>
 <p><%= link_to '--> Create a new Pizza <--', new_user_pizza_path(@user.id), class: "a-primary3" %></p>
@@ -18,3 +20,4 @@
 <% end %>
 <% end %>
 </div>
+<% end %>

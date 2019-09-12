@@ -1,3 +1,5 @@
+<% if logged_in? %>
+
 <table class="blueTable">
 <thead>
 <tr>
@@ -26,3 +28,4 @@
 
 
 <p class ="a-primary3"><%= link_to "Best users Page", best_users_path %></p>
+<% end %>

@@ -1,6 +1,9 @@
+<% if logged_in? %>
+
 <p class ="newtable">Top 2 Users with most pizzas created:</p>
 
 <% @users.each do |user|  %>
     <p class ="a-home2"><%= user.name %></p>
     <p class ="a-primary3">Number of pizzas created: <%= user.pizzas.count %></p>
-    <% end %>
+<% end %>
+<% end %>

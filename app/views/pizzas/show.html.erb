@@ -1,5 +1,6 @@
-<div>
+<% if logged_in? %>
 
+<div>
 <% if @pizza.user == current_user %>
 
 <%= render 'show' %>
@@ -35,3 +36,4 @@
     <h4 class= "a-show" >Pizza comment: <%= @pizza.rating.comment %></h4>
   <% end %>
 </div>
+<% end %>
